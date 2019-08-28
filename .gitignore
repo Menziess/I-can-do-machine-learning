@@ -8,3 +8,4 @@ dist/
 build/
 clear
 models/
+.ipynb_checkpoints/
