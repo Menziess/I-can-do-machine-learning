@@ -51,10 +51,10 @@ $(function () {
   reset.onclick = function () { clear(ctx) };
   classify.onclick = function () {
     var data = canvas.toDataURL("image/jpeg");
-    $.post(
-      '/predict',
-      data
-    )
+    $.post('/predict', data)
+      .done(res => {
+        alert(`You drew a ${res.prediction}?`)
+      });
   };
 
   clear(ctx);
