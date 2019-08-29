@@ -9,3 +9,4 @@ build/
 clear
 models/
 .ipynb_checkpoints/
+.mypy_cache/
