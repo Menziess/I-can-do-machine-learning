@@ -3,6 +3,7 @@ from flask import Flask, jsonify, render_template, request
 from training_sklearn.utils import data_to_arr
 
 import pickle
+import os
 
 
 def load_model(path):
@@ -15,9 +16,11 @@ model = load_model('./src/models/clf.pickle')
 
 
 # Boot app
+static_folder = os.path.join(os.getcwd(), 'res/static')
+template_folder = os.path.join(os.getcwd(), 'res')
 app = Flask(__name__,
-            static_folder="./frontend/static",
-            template_folder="./frontend")
+            static_folder=static_folder,
+            template_folder=template_folder)
 
 
 # Handle generic 404

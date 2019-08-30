@@ -1,5 +1,5 @@
 help:
-	@echo "Tasks in \033[1;32mrelay42-clickstream\033[0m:"
+	@echo "Tasks in \033[1;32mI-can-do-machine-learning\033[0m:"
 	@cat Makefile
 
 install:
@@ -16,7 +16,7 @@ dev:
 test: dev
 	pytest tests/ --doctest-modules --junitxml=junit/test-results.xml
 
-build:
+build: clean
 	pip install wheel
 	python setup.py bdist_wheel
 
