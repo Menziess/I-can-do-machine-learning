@@ -25,15 +25,14 @@ clean:
 	@find . -not -path './.venv*' -path '*/__pycache__*' -delete
 	@find . -not -path './.venv*' -path '*/*.egg-info*' -delete
 
-
-dockerize:
-	make build
-	docker build --rm -f "Dockerfile" -t menziess/training-sklearn:latest .
+dockerize: build
+	docker build --rm -f "Dockerfile" -t \
+  menziess/i-can-do-machine-learning:latest .
 
 publish:
-	docker push menziess/training-sklearn:latest
+	docker push menziess/i-can-do-machine-learning:latest
 
 run:
 	docker run --rm -it \
 	-p 8000:8000 \
-	menziess/training-sklearn:latest
+	menziess/i-can-do-machine-learning:latest
