@@ -1,7 +1,5 @@
 .venv/
 .vscode/
-Pipfile
-Pipfile.lock
 *.egg-info
 __pycache__/
 dist/
