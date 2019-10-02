@@ -12,7 +12,7 @@ def load_model(path):
 
 
 digits = datasets.load_digits()
-model = load_model('./src/models/clf.pickle')
+model = load_model('./src/models/clf.pkl')
 
 
 # Boot app
