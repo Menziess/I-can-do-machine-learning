@@ -12,7 +12,10 @@ def load_model(path):
 
 
 digits = datasets.load_digits()
-model = load_model('clf.pkl')
+try:
+    model = load_model('clf.pkl')
+except FileNotFoundError as e:
+    print(str(e))
 
 
 # Boot app
@@ -60,4 +63,4 @@ def predict_index(i):
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(host='0.0.0.0', port=8000)

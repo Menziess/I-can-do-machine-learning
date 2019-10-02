@@ -34,6 +34,7 @@ publish:
 
 run:
 	docker run --rm -it \
+  -e FLASK_ENV=development \
 	-p 8000:8000 \
   -v $$(pwd):/app \
 	menziess/i-can-do-machine-learning:latest
