@@ -11,7 +11,6 @@ RUN apt-get -y update && apt-get -y install unixodbc-dev
 RUN pipenv install --system --deploy
 COPY dist/* /app
 COPY res/ /app/res/
-COPY src/models/ /app/src/models/
 
 RUN pip install ./*.whl
 RUN rm /app/*.whl

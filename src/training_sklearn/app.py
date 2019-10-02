@@ -12,7 +12,7 @@ def load_model(path):
 
 
 digits = datasets.load_digits()
-model = load_model('./src/models/clf.pkl')
+model = load_model('clf.pkl')
 
 
 # Boot app

@@ -35,4 +35,5 @@ publish:
 run:
 	docker run --rm -it \
 	-p 8000:8000 \
+  -v $$(pwd):/app \
 	menziess/i-can-do-machine-learning:latest
