@@ -6,5 +6,6 @@ dist/
 build/
 clear
 models/
+XDG_CACHE_HOME/
 .ipynb_checkpoints/
 .mypy_cache/
