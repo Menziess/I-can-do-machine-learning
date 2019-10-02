@@ -15,7 +15,7 @@ digits = datasets.load_digits()
 try:
     model = load_model('clf.pkl')
 except FileNotFoundError as e:
-    print(str(e))
+    print(str(e))  # Don't do this normally
 
 
 # Boot app
@@ -38,7 +38,7 @@ def not_found(e):
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    return render_template('index.html', name=os.getenv('NAME', 'anonymous'))
 
 
 @app.route("/predict", methods=['POST'])
